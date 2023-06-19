@@ -1,0 +1,200 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+:root {
+    --color1: #ed963f;
+    --color2: rgba(4, 195, 1, 0.633);
+    --color3: #fb8d1e34;
+}
+body {
+    overflow: hidden;
+}
+
+body,
+button,
+input {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+}
+
+.background {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.container {
+    flex: 0 1 700px;
+    margin: auto;
+    padding: 10px;
+}
+
+.screen {
+    position: relative;
+    background: #ffffff;
+    border-radius: 15px;
+    height: 440px;
+    box-shadow: 0 10px 30px 0px rgba(49, 48, 48, 0.148);
+    width: 700px;
+    overflow: hidden;
+}
+
+.screen-body {
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.screen-body-item {
+    width: 50%;
+}
+
+.screen-body-item.left {
+    background: url(../css/img/Burger.jpeg);
+    background-position: center center;
+    background-size: cover;
+    object-fit: contain;
+    width: 50%;
+}
+
+.screen-body-item.right {
+    width: 50%;
+}
+.app-title {
+    position: absolute;
+    color: #080808;
+    top: 30px;
+    font-size: 20px;
+}
+
+.app-form {
+    margin-top: 40px;
+}
+
+.group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.input {
+    font-size: 14px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #000000;
+    background: transparent;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.input:focus {
+    outline: none;
+}
+
+label {
+    color: #000000;
+    font-size: 16px;
+    font-weight: 500;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    transition: 0.2s ease all;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.input:focus ~ label,
+.input:valid ~ label {
+    top: -7px;
+    font-size: 14px;
+    color: var(--color1);
+}
+
+.bar {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.bar:before,
+.bar:after {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 1px;
+    position: absolute;
+    background: var(--color1);
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+.bar:before {
+    left: 50%;
+}
+
+.bar:after {
+    right: 50%;
+}
+
+.input:focus ~ .bar:before,
+.input:focus ~ .bar:after {
+    width: 50%;
+}
+
+.highlight {
+    position: absolute;
+    height: 60%;
+    width: 100px;
+    top: 25%;
+    left: 0;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.input:focus ~ .highlight {
+    animation: inputHighlighter 0.3s ease;
+}
+
+@keyframes inputHighlighter {
+    from {
+        background: var(--color1);
+    }
+
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+.btn {
+    width: 299px;
+    height: 40px;
+    border-radius: 50px;
+    background: #000000;
+    box-shadow: 0 10px 30px 0px rgba(49, 48, 48, 0.281);
+    outline: none;
+    cursor: pointer;
+    border: none;
+    font-size: 15px;
+    color: white;
+    transition: all 0.3s ease-in-out;
+    font-family: 'Dosis', sans-serif;
+    margin-top: 35px;
+}
+
+.btn:hover {
+    transform: translateY(3px);
+    box-shadow: none;
+}
+
+.btn:active {
+    opacity: 0.5;
+}

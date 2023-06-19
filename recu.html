@@ -1,0 +1,290 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <title>valider</title>
+</head>
+
+
+<body>
+
+<style>
+    *{
+        
+        margin: 0;
+        padding: 0;
+    }
+    body{
+    height:100vh;
+    width:100%;
+    overflow: hidden;
+    
+   
+}
+.mess{
+    position: absolute;
+    bottom: 30px;
+    color:#fff;
+    font-family: Arial;
+    font-size: 13px;
+    letter-spacing: 1px;
+
+}
+    .recu-container{
+        position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+    height: 100%;
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+   
+}
+.recu{
+    position: relative;
+    bottom:-90%;
+    visibility: none;
+    display: flex;
+    width:255px;
+    height:370px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    box-shadow: 6px 6px 94px -28px rgba(0,0,0,0.05);
+    border-radius: 10px;
+}
+.head{
+    position: absolute;
+    top:13px;
+    padding-top: 10px;
+    width:100%;
+    height:93px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  
+}
+.head .logo{
+    position:relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fed260;
+    border-radius: 20px;
+}
+.logo img{
+padding: 16px;
+width:40px;
+height:40px;
+object-fit: cover;
+}
+.head .oright,
+.oleft{
+    position: absolute;
+    bottom:-20px;
+    width:30px;
+    height:30px;
+    border-radius: 50%;
+   background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+}
+.oleft{
+    left:-15px;
+}
+.oright{
+    right:-15px;
+}
+.tit{
+    width:100%;
+    font-size: 16px;
+    font-family: Arial;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 13px;
+    padding-bottom: 6px;
+    border-bottom: 1px dashed lightgrey;
+}
+.body{
+    position: relative;
+    margin-top:140px;
+    width:100%;
+    height: 80%;
+    display: flex;
+    font-family: Arial;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
+
+.client-name p{
+    position:absolute;
+    top:0;
+    left: 8px;
+    font-size: 13px;
+    font-weight: 200;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
+.comand{
+   max-height:140px;
+    width:240px;
+    overflow: hidden;
+    overflow-y:scroll;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: -35px;
+    background-color: #dfdfdf;
+  
+}
+.comand::-webkit-scrollbar-thumb{
+    background: lightgrey;
+    height: 4px;
+    border-radius: 20px;
+}
+.comand::-webkit-scrollbar{
+    background:#fff;
+    width: 3px;
+    border-radius: 20px;
+}
+.items{
+    position:relative;
+    width:100%;  
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 3px;
+    font-size: 13px;
+}
+.items span{
+
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+.totale{
+    padding-top: 9px;
+    border-top: 1px dashed #878787;
+    width:240px;
+    margin-top:45px;
+}
+.totale p{
+    font-size: 14px;
+}
+.totale span{
+    right:5px;
+    position:absolute;
+    font-size: 14px;
+}
+.print-main{
+   position: absolute;
+    bottom:0; 
+    width:300px;
+    height: 70px;
+    z-index:111;
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+   
+}
+.printer{
+    position: absolute;
+    bottom:50px;
+    width:350px;
+    height:65px;
+    z-index:11;
+    border-radius: 8px;
+    background-color: #1e1e1e;
+    box-shadow: 1px -1px 8px 0px rgba(254, 254, 254, 0.30) inset;
+-webkit-box-shadow: 1px -1px 8px 0px rgba(254, 254, 254, 0.30) inset;
+-moz-box-shadow: 1px -1px 8px 0px rgba(254, 254, 254, 0.30) inset;
+    display: flex;
+    z-index:1111;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #ffd365;
+}
+.printer .mouth{
+    width:88%;
+    height:70%;
+    border-radius: 8px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px -1px 8px 0px rgba(0, 0, 0, 0.28) inset;
+-webkit-box-shadow: 1px -1px 8px 0px rgba(0,0,0,0.28) inset;
+-moz-box-shadow: 1px -1px 8px 0px rgba(0,0,0,0.28) inset;
+border: 1px solid #aaa9ad;
+}
+.mouth .line{
+   width:100%;
+   height:2px;
+   background-color: #757575;
+}
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/canvas-confetti/1.6.0/confetti.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+   <div class="recu-container">
+    <div class="print-main"></div>
+    <div class="printer">
+        <div class="mouth"><div class="line"></div></div>
+    </div>
+   <div class="recu">
+
+   <div class="head">
+    <div class="logo"><img src="img/783076.png" alt="" srcset=""></div>
+    <div class="tit"> ma ma mia </div>
+    <div class="oleft"></div>
+    <div class="oright"></div>
+   </div>
+   
+   <div class="body">
+
+    <div class="client-name">
+        <p>labide</p>
+    </div>
+   
+   <div class="comand">
+   
+    <div class="items">
+        burger<span>25 Dhs</span>
+    </div>
+   
+    
+   </div>
+
+   <div class="totale">
+    <p>Total HT : <span>25 Dhs</span></p>
+    <p>Total : <span>25 Dhs</span></p>
+   </div>
+
+   </div>
+
+   </div>
+ 
+   </div>
+
+   <script>
+     
+
+    anime({
+targets: '.recu',
+top:'0',
+scale: 1,
+duration: 750,
+duration: 3000,
+easing: 'easeInOutExpo'
+});
+
+
+</script>
+
+</body>
+</html>

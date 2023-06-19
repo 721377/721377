@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+            integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/ajouter.css" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="product_form" id="product_form">
+            <div class="title">
+                <h3>Ajouter nouveau Produit</h3>
+                <img src="images/restaurant.png" alt="" />
+            </div>
+
+            <div class="line"></div>
+
+            <form action="add_product.php" method="post" enctype="multipart/form-data">
+                <div class="inputs_text">
+                    <div class="inputGroup">
+                        <input type="text" required="" autocomplete="off" class="text_inpute" name="name" />
+                        <label for="name">Nom</label>
+                    </div>
+
+                    <div class="inputGroup">
+                        <textarea
+                            name="Discription"
+                            id=""
+                            style="resize: vertical"
+                            class="text_inpute"
+                            placeholder="Discription"
+                        ></textarea>
+                    </div>
+
+                    <div class="prix">
+                        <div class="inputGroup">
+                            <input type="text" required="" autocomplete="off" class="text_inpute" name="prix" />
+                            <label for="name">prix</label>
+                        </div>
+
+                        <div class="inputGroup">
+                            <input type="text" required="" autocomplete="off" class="text_inpute" name="last_prix" />
+                            <label for="name">Dernier prix</label>
+                        </div>
+                    </div>
+
+                    <div class="inputGroup">
+                        <select name="category" id="" class="select">
+                            <option value="" disabled selected hidden>Categorys</option>
+                            <option value="burger">Burger</option>
+                            <option value="pizza">Pizza</option>
+                            <option value="salade">Salade</option>
+                            <option value="sushi">Sushi</option>
+                            <option value="desserts">Desserts</option>
+                        </select>
+                    </div>
+
+                    <label for="file_uplo" class="file_lab">
+                        <input id="file_uplo" type="file" name="pic" />
+                        <i class="fa fa-upload" aria-hidden="true"></i>
+                        Uplod the Picture
+                    </label>
+                </div>
+
+                <div class="buttons">
+                    <a href="product.php">Quitter</a>
+
+                    <button type="submit">Ajouter</button>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
